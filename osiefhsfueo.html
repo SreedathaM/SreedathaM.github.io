@@ -3,37 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
+    <title>About Me - Everyday Person</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
         header {
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
             text-align: center;
+            padding: 2em 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
             padding: 1em 0;
         }
-        nav {
-            background-color: #444;
-            overflow: hidden;
-        }
+
         nav a {
             color: white;
             padding: 14px 20px;
             text-decoration: none;
-            float: left;
+            text-transform: uppercase;
         }
+
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #575757;
         }
-        .content {
-            padding: 20px;
+
+        .container {
+            width: 80%;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
+        .intro, .interests, .contact {
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .intro p, .interests p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        .interests ul {
+            list-style-type: none;
+        }
+
+        .interests li {
+            padding: 8px 0;
+            font-size: 1.1em;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact button {
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact button:hover {
+            background-color: #45a049;
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -47,23 +119,62 @@
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <h1>Welcome to My Simple Website</h1>
+        <h1>Meet John Doe</h1>
+        <p>Just an everyday person living an extraordinary life</p>
     </header>
 
+    <!-- Navigation Menu -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="#intro">Introduction</a>
+        <a href="#interests">Interests</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <div class="content">
-        <h2>About This Site</h2>
-        <p>This is a simple website to showcase basic HTML structure. You can add more content, links, and styling to personalize your site.</p>
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- Introduction Section -->
+        <section id="intro" class="intro">
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is John Doe, and I am just like anyone else — with dreams, hopes, and passions. 
+                I enjoy the little things in life, like a good cup of coffee in the morning and a walk in the park. 
+                Life has been a wonderful journey, and I try to live each day with a smile.
+            </p>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="interests">
+            <h2>My Interests</h2>
+            <p>Here are a few things I love to do:</p>
+            <ul>
+                <li>Reading books on personal growth and psychology</li>
+                <li>Exploring new places and cultures through travel</li>
+                <li>Working out and staying active</li>
+                <li>Cooking healthy meals and trying new recipes</li>
+                <li>Volunteering and giving back to the community</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <p>I'd love to hear from you! Feel free to reach out to me.</p>
+            <form action="#">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
     </div>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Simple Website. All rights reserved.</p>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
     </footer>
 
 </body>
